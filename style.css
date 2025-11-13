@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Corrected font-family syntax */
+}
+
+/* --- FULL-SCREEN BACKGROUND SETUP --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../téléchargé.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    color: #49aee9;
+    border-radius: 12px;
+    padding: 30px 40px; /* Increased side padding for better alignment */
+ }
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+
+}
+/* --- THE INPUT BOX CONTAINER (Parent to Input and Icon) --- */
+.wrapper .input-box {
+   position: relative; 
+   width: 100%;
+   height: 50px;
+   margin: 30px 0; 
+}
+
+/* --- THE INPUT FIELD --- */
+.input-box input{
+  width: 100%; /* FIX: CRITICAL to make the input fill the container */
+  height: 100%;
+  background:transparent ;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255,255,255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #49aee9;
+  padding: 20px 45px 20px 20px; /* Space on the right for the icon */
+}
+
+.input-box input::placeholder{
+  color:  #49aee9;
+}
+
+/* --- THE ICON (Child of .input-box) --- */
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 30%; /* Position the top edge at the center */
+  
+  /* FIX: CRITICAL - Correct way to vertically center the icon */
+  transform: translateY(-10%); 
+  
+  font-size: 20px;
+  /* Ensure the icon is white */
+  color: #49aee9; 
+}
+
+/* --- BUTTON STYLES --- */
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 45px;
+  box-shadow: 0 0 10px rgba(0,0,0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #49aee9;
+  font-weight: 600;
+}

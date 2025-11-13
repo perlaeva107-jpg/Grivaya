@@ -1,0 +1,99 @@
+body {
+    /* Ensure the body takes up the entire browser viewport */
+    background-color: #344f57;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent extra scrollbars */
+}
+
+/* --- 1. Screen Container (Now fills the entire viewport) --- */
+.psp-screen {
+    /* Make the container fill the screen */
+    width: 100vw;
+    height: 100vh;
+    background-color: #26484b; /* Dark background color for the chat area */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    /* Remove any box-shadow or border that was creating the 'small box' effect */
+}
+
+/* --- 2. Header Style (Username Top Left) --- */
+.chat-header {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    padding: 15px 20px; /* More padding for a browser view */
+    background: transparent;
+    font-size: 1.5em; /* Larger text for a desktop view */
+    font-weight: 700;
+    height: 60px; /* Give the header a fixed height */
+}
+
+.user-name {
+    /* Username is now explicitly on the left */
+    text-align: left;
+}
+
+/* --- 3. Message Area (The big empty space) --- */
+.message-container {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    /* This section is the large empty space in the middle */
+}
+
+/* --- 4. Input Area (Bottom Center) --- */
+.input-area {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the input group horizontally */
+    padding: 20px 0; /* Padding above and below the input group */
+    background-color: transparent; 
+    width: 100%; /* Spans the full width */
+}
+
+/* Input Box Styling (Transparent, Rounded, and Wider) */
+.message-input {
+    /* Give the input a fixed maximum width for centering */
+    max-width: 600px; 
+    width: 80%; /* Takes up 80% of its container (input-area) */
+    padding: 12px 20px;
+    font-size: 1em;
+    color: white;
+    
+    /* Transparent background and rounded edges retained */
+    background-color: rgba(252, 168, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px; 
+    
+    outline: none;
+}
+
+/* Send Button Styling */
+.send-button {
+    background-color: #f58bda;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+/* --- Optional: Remove unused styles that created the message bubbles --- */
+/* The HTML is currently empty of messages, but these styles are kept
+   in the background if you decide to add messages later.
+.message-group, .message-bubble, .meta-data { ... } */

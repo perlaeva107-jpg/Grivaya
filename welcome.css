@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Poppins as a fallback for everything else */
+    font-family: "Poppins", sans-serif; 
+}
+
+/* --- FULL-SCREEN BACKGROUND --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Assuming your image path '../5776047022858242920.png' is correct after our last fix */
+    background: url('../téléchargé.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color:white ;/* Default text color is white */
+    text-align: center; /* Center text within the body/container */
+}
+
+/* --- WELCOME CONTAINER (The centered box) --- */
+.welcome-container {
+    padding: 40px 60px; /* Add padding inside */
+    border-radius: 15px;
+    max-width: 90%;
+}
+
+/* --- STYLIZED WELCOME WRITING (h1) --- */
+.welcome-container h1 {
+    /* APPLY PACIFICO FONT */
+    font-family: 'Pacifico', cursive; 
+    
+    font-size: 5em; /* Large size for prominence */
+    margin-bottom: 0.1em;
+    
+    /* BLUE COLOR TO MATCH BACKGROUND */
+    color: #89cff0; /* A clear, light blue */
+    
+    /* TEXT SHADOW for the stylized, outlined look */
+    text-shadow: 
+        1px 1px 3px rgba(0, 0, 0, 0.6), /* Main shadow for depth */
+        -2px -2px 0 #3b82f6, /* Darker blue shadow/outline top-left */
+        2px 2px 0 #3b82f6; /* Darker blue shadow/outline bottom-right */
+}
+
+/* --- SLOGAN TEXT (p) --- */
+.welcome-container p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- GET STARTED BUTTON (a.start-btn) --- */
+.start-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    background: transparent;
+    color:#fff;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+.start-btn:hover {
+    background: #e0e0e0;
+}
